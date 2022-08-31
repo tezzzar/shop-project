@@ -166,6 +166,14 @@ li:hover>.submenu {
   margin-left: 30px;
 }
 
+.submenu li:first-child {
+  padding-top: 15px;
+}
+
+.submenu li:last-child {
+  padding-bottom: 15px;
+}
+
 .menu a:hover {
   background-color: #2c71b8;
   color: white;
@@ -208,17 +216,69 @@ li:hover .arrow {
   border-bottom: 1px solid white;
 }
 
+.left-filter legend {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked+label::before {
+  background-color: white;
+}
+
+label::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 2px solid white;
+  margin: 30px 10px 0 0;
+}
+
 .left-filter {
-  background-color: #568dc6;
   padding-top: 32px;
   padding-left: 28px;
+  padding-bottom: 30px;
   font-weight: light;
   font-size: 21px;
   font-family: "Roboto";
   color: white;
 }
 
-.left-filter legend {
+.left-filter-bg {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.left-filter-type {
+  margin-bottom: 65px;
+}
+
+.left-filter-options-link {
+  display: block;
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.left-filter button {
+  background-color: #2c71b8;
+  display: block;
+  text-decoration: none;
+  border: 1px solid white;
+  width: 210px;
+  height: 50px;
+  outline: none;
+  line-height: 50px;
+}
+
+.left-filter button>span {
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 21px;
+  color: white;
 }

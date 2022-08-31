@@ -68,34 +68,58 @@
     <div class="container">
       <div class="row">
         <div class="col-3">
-          <div class="left-filter">
-            <form action="">
-              <legend>Device type</legend>
-              <input type="checkbox" placeholder="Laptop">
-              <input type="checkbox" placeholder="Tablet">
-            </form>
-            <!-- <ul>Device type
-              <li>Laptop</li>
-              <li>Tablet</li>
-            </ul>
-            <ul>Color
-              <li>Black</li>
-              <li>Red</li>
-              <li>Green</li>
-              <li>Blue</li>
-              <li>Orange</li>
-            </ul>
-            <ul>Ram
-              <li>1Gb</li>
-              <li>2Gb</li>
-              <li>4Gb</li>
-              <li>6Gb</li>
-              <li>8Gb</li>
-            </ul> -->
-            <div>
-              Show more options...
+          <div class="left-filter-bg">
+            <div class="left-filter">
+              <form action="">
+                <div class="left-filter-type">
+                  <legend>Device type</legend>
+                  <div><input id="laptop" type="checkbox">
+                    <label for="laptop">Laptop</label>
+                  </div>
+                  <div><input id="tablet" type="checkbox">
+                    <label for="tablet">Tablet</label>
+                  </div>
+                </div>
+                <div class="left-filter-type">
+                  <legend>Color</legend>
+                  <div><input id="black" type="checkbox">
+                    <label for="black">Black</label>
+                  </div>
+                  <div><input id="red" type="checkbox">
+                    <label for="red">Red</label>
+                  </div>
+                  <div><input id="green" type="checkbox">
+                    <label for="green">Green</label>
+                  </div>
+                  <div><input id="blue" type="checkbox">
+                    <label for="blue">Blue</label>
+                  </div>
+                  <div><input id="orange" type="checkbox">
+                    <label for="orange">Orange</label>
+                  </div>
+                </div>
+                <legend>Ram</legend>
+                <div><input id="gb1" type="checkbox">
+                  <label for="gb1">1Gb</label>
+                </div>
+                <div><input id="gb2" type="checkbox">
+                  <label for="gb2">2Gb</label>
+                </div>
+                <div><input id="gb4" type="checkbox">
+                  <label for="gb4">4Gb</label>
+                </div>
+                <div><input id="gb6" type="checkbox">
+                  <label for="gb6">6Gb</label>
+                </div>
+                <div><input id="gb8" type="checkbox">
+                  <label for="gb8">8Gb</label>
+                </div>
+                <div>
+                  <a class="left-filter-options-link" href="">Show more options...</a>
+                </div>
+                <button><span>Submit</span></button>
+              </form>
             </div>
-            <button>Submit</button>
           </div>
         </div>
         <div class="col-4">Product card
