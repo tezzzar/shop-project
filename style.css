@@ -186,16 +186,29 @@ li:hover a {
 }
 
 li:hover .arrow {
-  visibility: visible;
+  background-image: url(images/down-arrow-white.png);
 }
 
 .arrow {
-  background-image: url(images/211687_down_arrow_icon-2.png);
+  background-image: url(images/down_arrow_blue.png);
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: center;
   height: 10px;
   display: inline-block;
   width: 20px;
-  visibility: hidden;
+}
+
+.slider {
+  display: block;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  opacity: 25%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.left-filter {
+  background-color: #568dc6;
 }
