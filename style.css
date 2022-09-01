@@ -32,15 +32,27 @@ body {
   width: 25%;
 }
 
+.col-4 {
+  width: 33.33333%;
+}
+
 .col-6 {
   width: 50%;
 }
 
-.col-4 {
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-9 {
   width: 75%;
 }
 
-.col-9 input {
+.form-search-header>input {
   padding-left: 20px;
   padding-top: 5px;
   width: 200px;
@@ -50,14 +62,14 @@ body {
   border: 1px solid #2c71b8;
 }
 
-.col-9 ::placeholder {
+::placeholder {
   text-decoration: none;
   color: #2c71b8;
   font-size: 21px;
   font-family: "roboto";
 }
 
-.col-9 button {
+.form-search-header button {
   position: relative;
   background-color: #2c71b8;
   background-image: url(images/icon-search.png);
@@ -68,7 +80,6 @@ body {
   left: 165px;
   top: -40px;
   border: none;
-  z-index: 10;
 }
 
 .form-search-header {
@@ -84,8 +95,8 @@ body {
   background-position: center;
   width: 40px;
   height: 40px;
-  top: -35px;
-  left: 230px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .product-count {
@@ -144,7 +155,8 @@ body {
 
 }
 
-li:hover>.submenu {
+li:hover>.submenu,
+li:hover>.submenu-sort {
   visibility: visible;
   opacity: 1;
 }
@@ -166,13 +178,13 @@ li:hover>.submenu {
   margin-left: 30px;
 }
 
-.submenu li:first-child {
+/* .submenu li:first-child {
   padding-top: 15px;
 }
 
 .submenu li:last-child {
   padding-bottom: 15px;
-}
+} */
 
 .menu a:hover {
   background-color: #2c71b8;
@@ -267,7 +279,6 @@ label::before {
 
 .left-filter button {
   background-color: #2c71b8;
-  display: block;
   text-decoration: none;
   border: 1px solid white;
   width: 210px;
@@ -281,4 +292,72 @@ label::before {
   text-transform: uppercase;
   font-size: 21px;
   color: white;
+}
+
+.breadcrumbs a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  font-family: "Roboto";
+  font-weight: lighter;
+  opacity: 0.5;
+  margin: 30px 0;
+}
+
+.breadcrumbs a:hover span {
+  text-decoration: underline;
+}
+
+.main-header {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+}
+
+input[name="sort"] {
+  display: none;
+
+}
+
+/* _____________________________________ */
+
+.menu-sort a {
+  background-color: #2c71b8;
+  display: block;
+  height: 50px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 21px;
+  text-align: left;
+  line-height: 50px;
+  font-family: 'Roboto';
+  font-weight: light;
+  border: 1px solid white;
+  padding-left: 20px;
+}
+
+.submenu-sort {
+  position: absolute;
+  width: 270px;
+  visibility: hidden;
+  opacity: 0;
+  /* border-bottom: none; */
+}
+
+.submenu-sort li {
+position: relative;
+}
+
+.submenu-sort li:hover>a {
+background-color: white;
+color: #2c71b8;
+}
+
+.menu-sort .arrow {
+  background-image: url(images/down-arrow-white.png);
+  position: relative;
+  top: 0;
+  left: 100px;
 }
