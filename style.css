@@ -282,7 +282,7 @@ label::before {
 }
 
 .left-filter button:hover span {
-  color: #20558B;
+  color: #2c71b8;
 }
 
 .left-filter button>span {
@@ -445,7 +445,7 @@ input[name="sort"] {
 }
 
 .prod-card button:hover span {
-  color: #20558B;
+  color: #2c71b8;
 }
 
 .prod-card button>span {
