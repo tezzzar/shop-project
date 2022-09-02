@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -87,7 +87,7 @@ body {
   height: 40px;
 }
 
-.card-header {
+.basket-header {
   position: relative;
   background-color: white;
   background-image: url(images/cart-blue.png);
@@ -178,24 +178,11 @@ li:hover>.submenu-sort {
   margin-left: 30px;
 }
 
-/* .submenu li:first-child {
-  padding-top: 15px;
-}
-
-.submenu li:last-child {
-  padding-bottom: 15px;
-} */
-
 li:hover a,
 .menu a:hover {
   background-color: #2c71b8;
   color: white;
 }
-
-/* li:hover a {
-  background-color: #2c71b8;
-  color: white;
-} */
 
 .submenu li:hover,
 .submenu li:hover a {
@@ -325,14 +312,13 @@ label::before {
   font-weight: bold;
   font-size: 48px;
   color: white;
+  margin-bottom: 30px;
 }
 
 input[name="sort"] {
   display: none;
 
 }
-
-/* _____________________________________ */
 
 .menu-sort a {
   background-color: #2c71b8;
@@ -354,7 +340,10 @@ input[name="sort"] {
   width: 270px;
   visibility: hidden;
   opacity: 0;
-  /* border-bottom: none; */
+}
+
+.submenu-sort a {
+  border-top: none;
 }
 
 .submenu-sort li {
@@ -380,4 +369,174 @@ input[name="sort"] {
 .menu-sort a:hover {
   background-color: white;
   color: #2c71b8;
+}
+
+/* ___________________________Card-Product________________ */
+
+[class*="card-"] {
+  margin-top: 30px;
+  font-family: "Roboto";
+  border: 1px solid white;
+}
+
+[class*="prod-pic"] {
+  background-color: #cadbed;
+  width: 270px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prod-card h2 {
+  margin-bottom: 20px;
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.prod-description {
+  padding: 15px;
+}
+
+.prod-card p {
+  margin-bottom: 15px;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 1.3em;
+}
+
+.prod-card span {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: white;
+}
+
+.price p {
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+}
+
+.price span {
+  vertical-align: super;
+}
+
+.prod-card button {
+  background-color: #2c71b8;
+  text-decoration: none;
+  border: 1px solid white;
+  width: 210px;
+  height: 50px;
+  outline: none;
+  line-height: 50px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.prod-card button:hover {
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid #20558B;
+}
+
+.prod-card button:hover span {
+  color: #20558B;
+}
+
+.prod-card button>span {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: white;
+}
+
+/* ___________add-to-card-button____________ */
+
+.add-to-card-button {
+  background-color: #568dc6;
+  text-decoration: none;
+  border: 1px solid white;
+  width: 210px;
+  height: 50px;
+  outline: none;
+  line-height: 50px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 15px;
+  /* float: left; */
+  text-align: center;
+}
+
+.add-to-card-button a {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: white;
+}
+
+.card-button-image {
+  display: inline-block;
+  background-image: url(images/cart-white.png);
+  /* background-size: 20px; */
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 0 0 10px;
+}
+
+.add-to-card-button:hover {
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid #20558B;
+
+}
+
+.add-to-card-button:hover a {
+  color: #2c71b8;
+}
+
+.add-to-card-button:hover .card-button-image {
+  background-image: url(images/cart-blue.png);
+}
+
+/* _____________card-backgraund-small-image____________ */
+
+
+
+
+.prod-pic1 {
+  background-image: url(images/prod1.png);
+  padding: 10px;
+}
+.prod-pic2, .prod-pic3 {
+  margin: 0px 0px 10px auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #2c71b8;
+}
+
+.prod-pic2 {
+  background-image: url(images/square-blue.png);
+}
+
+.prod-pic3 {
+  background-image: url(images/heart-blue.png);
+}
+
+.prod-pic2:hover {
+  background-image: url(images/square-white.png);
+  background-color: #2c71b8;
+}
+
+.prod-pic3:hover {
+  background-image: url(images/heart-white.png);
+  background-color: #2c71b8;
 }
