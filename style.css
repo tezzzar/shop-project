@@ -52,14 +52,29 @@ body {
   width: 75%;
 }
 
-.form-search-header>input {
-  padding-left: 20px;
-  padding-top: 5px;
+
+/* -------------search-header-------------- */
+
+
+
+.form-search-header {
+  display: block;
   width: 200px;
   height: 40px;
-  margin: 5px 0;
-  background-color: #c9daed;
   border: 1px solid #2c71b8;
+  /* margin: 5px; */
+  /* padding: 5px; */
+  margin-top: 5px;
+}
+
+.form-search-header>input {
+  display: inline-block;
+  padding: 5px 0px 5px 20px;
+  outline: none;
+  border: none;
+  background: none;
+  vertical-align: text-bottom;
+  margin-top: 8px;
 }
 
 .form-search-header>input::placeholder {
@@ -67,24 +82,18 @@ body {
   color: #2c71b8;
   font-size: 21px;
   font-family: "roboto";
+  font-weight: lighter;
 }
 
 .form-search-header button {
-  position: relative;
   background-color: #2c71b8;
   background-image: url(images/icon-search.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 30px;
   height: 30px;
-  left: 165px;
-  top: -40px;
   border: none;
-}
-
-.form-search-header {
-  width: 200px;
-  height: 40px;
+  padding: 5px;
 }
 
 .basket-header {
@@ -112,6 +121,9 @@ body {
   left: -25%;
 }
 
+/* -----------------search-header---------------- */
+
+
 [class*="col-"] {
   float: left;
   padding-left: 15px;
@@ -122,6 +134,7 @@ body {
   background-color: rgba(255, 255, 255, 0.75);
   padding: 25px 0;
   height: 100px;
+  font-weight: lighter;
 }
 
 .logo {
@@ -140,7 +153,7 @@ body {
 
 .submenu {
   position: absolute;
-  width: 285px;
+  width: auto;
   z-index: 10;
   visibility: hidden;
   opacity: 0;
@@ -152,7 +165,7 @@ body {
   display: block;
   background-color: #2c71b8;
   right: 1px;
-
+  padding-right: 20px;
 }
 
 li:hover>.submenu,
@@ -176,6 +189,8 @@ li:hover>.submenu-sort {
 .submenu a {
   text-align: left;
   margin-left: 30px;
+  height: 40px;
+  line-height: 40px;
 }
 
 li:hover a,
@@ -217,7 +232,7 @@ li:hover .arrow {
 }
 
 .left-filter legend {
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -240,13 +255,12 @@ label::before {
 }
 
 .left-filter {
-  padding-top: 32px;
-  padding-left: 28px;
-  padding-bottom: 30px;
-  font-weight: light;
+  padding: 30px;
+  font-weight: lighter;
   font-size: 21px;
   font-family: "Roboto";
   color: white;
+  line-height: 0.75;
 }
 
 .left-filter-bg {
@@ -260,7 +274,7 @@ label::before {
 .left-filter-options-link {
   display: block;
   color: white;
-  margin-top: 35px;
+  margin-top: 30px;
   margin-bottom: 30px;
   text-decoration: none;
 }
@@ -286,7 +300,7 @@ label::before {
 }
 
 .left-filter button>span {
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 21px;
   color: white;
@@ -300,7 +314,7 @@ label::before {
   font-family: "Roboto";
   font-weight: lighter;
   opacity: 0.5;
-  margin: 30px 0;
+  margin: 30px 0 15px 0;
 }
 
 .breadcrumbs a:hover span {
@@ -312,7 +326,8 @@ label::before {
   font-weight: bold;
   font-size: 48px;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 input[name="sort"] {
@@ -320,19 +335,26 @@ input[name="sort"] {
 
 }
 
+/* --------------menu-sort---------------- */
+
+.menu-sort {
+  margin-top: 10px;
+}
+
 .menu-sort a {
   background-color: #2c71b8;
   display: block;
-  height: 50px;
+  height: 40px;
   text-decoration: none;
   color: #fff;
   font-size: 21px;
   text-align: left;
-  line-height: 50px;
+  line-height: 40px;
   font-family: 'Roboto';
-  font-weight: light;
+  font-weight: lighter;
   border: 1px solid white;
   padding-left: 20px;
+  /* padding-top: 20px; */
 }
 
 .submenu-sort {
@@ -344,6 +366,7 @@ input[name="sort"] {
 
 .submenu-sort a {
   border-top: none;
+
 }
 
 .submenu-sort li {
@@ -449,7 +472,7 @@ input[name="sort"] {
 }
 
 .prod-card button>span {
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 21px;
   color: white;
@@ -468,7 +491,6 @@ input[name="sort"] {
   margin: 0 auto;
   display: block;
   margin-bottom: 15px;
-  /* float: left; */
   text-align: center;
 }
 
@@ -477,6 +499,7 @@ input[name="sort"] {
   text-transform: uppercase;
   font-size: 21px;
   color: white;
+  font-weight: 500;
 }
 
 .card-button-image {
@@ -512,10 +535,12 @@ input[name="sort"] {
 
 
 .prod-pic1 {
-  background-image: url(images/prod1.png);
   padding: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
-.prod-pic2, .prod-pic3 {
+
+.prod-pic2,
+.prod-pic3 {
   margin: 0px 0px 10px auto;
   display: block;
   width: 30px;
@@ -539,4 +564,63 @@ input[name="sort"] {
 .prod-pic3:hover {
   background-image: url(images/heart-white.png);
   background-color: #2c71b8;
+}
+
+.card-1 .prod-pic1 {
+  background-image: url(images/prod1.png);
+}
+
+.card-2 .prod-pic1 {
+  background-image: url(images/prod2.png);
+}
+
+.card-3 .prod-pic1 {
+  background-image: url(images/prod3.png);
+}
+
+.card-4 .prod-pic1 {
+  background-image: url(images/prod4.png);
+}
+
+.card-5 .prod-pic1 {
+  background-image: url(images/prod5.png);
+}
+
+.card-6 .prod-pic1 {
+  background-image: url(images/prod6.png);
+}
+
+.card-7 .prod-pic1 {
+  background-image: url(images/prod7.png);
+}
+
+.card-8 .prod-pic1 {
+  background-image: url(images/prod2.png);
+}
+
+.card-9 .prod-pic1 {
+  background-image: url(images/prod3.png);
+}
+
+.next-page-button {
+  display: block;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: 100;
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #2c71b8;
+  font-size: 21px;
+  font-family: "Roboto";
+  font-weight: lighter;
 }
