@@ -58,13 +58,17 @@ body {
 
 
 .form-search-header {
-  display: block;
-  width: 200px;
   height: 40px;
   border: 1px solid #2c71b8;
-  /* margin: 5px; */
-  /* padding: 5px; */
   margin-top: 5px;
+}
+
+.form-search-header>input[type="text"] {
+  color: #2c71b8;
+  font-size: 21px;
+  font-family: "roboto";
+  font-weight: lighter;
+  max-width: 150px;
 }
 
 .form-search-header>input {
@@ -74,7 +78,6 @@ body {
   border: none;
   background: none;
   vertical-align: text-bottom;
-  margin-top: 8px;
 }
 
 .form-search-header>input::placeholder {
@@ -93,7 +96,8 @@ body {
   width: 30px;
   height: 30px;
   border: none;
-  padding: 5px;
+  margin-top: 4px;
+  margin-left: 5px;
 }
 
 .basket-header {
@@ -106,6 +110,17 @@ body {
   height: 40px;
   margin-top: 5px;
   margin-left: 5px;
+}
+
+.basket-header:hover {
+  background-image: url(images/cart-white.png);
+  background-color: #2c71b8;
+  cursor: pointer;
+}
+
+.basket-header:hover .product-count {
+  background-color: #fff;
+  color: #2c71b8;
 }
 
 .product-count {
@@ -339,7 +354,6 @@ input[name="sort"] {
 
 .menu-sort {
   margin-top: 10px;
-  /* padding-left: 10px; */
 }
 
 .menu-sort a {
@@ -508,7 +522,6 @@ input[name="sort"] {
 .card-button-image {
   display: inline-block;
   background-image: url(images/cart-white.png);
-  /* background-size: 20px; */
   width: 20px;
   height: 20px;
   border: none;
@@ -533,8 +546,6 @@ input[name="sort"] {
 }
 
 /* _____________card-backgraund-small-image____________ */
-
-
 
 
 .prod-pic1 {
@@ -562,11 +573,13 @@ input[name="sort"] {
 .prod-pic2:hover {
   background-image: url(images/square-white.png);
   background-color: #2c71b8;
+  cursor: pointer;
 }
 
 .prod-pic3:hover {
   background-image: url(images/heart-white.png);
   background-color: #2c71b8;
+  cursor: pointer;
 }
 
 .card-1 .prod-pic1 {
