@@ -278,7 +278,7 @@ label::before {
 .left-filter button:hover {
   background-color: #fff;
   cursor: pointer;
-  border: 1px solid #20558B;
+  border: 1px solid #568dc6;
 }
 
 .left-filter button:hover span {
@@ -441,7 +441,7 @@ input[name="sort"] {
 .prod-card button:hover {
   background-color: #fff;
   cursor: pointer;
-  border: 1px solid #20558B;
+  border: 1px solid #2c71b8;
 }
 
 .prod-card button:hover span {
@@ -494,7 +494,7 @@ input[name="sort"] {
 .add-to-card-button:hover {
   background-color: #fff;
   cursor: pointer;
-  border: 1px solid #20558B;
+  border: 1px solid #2c71b8;
 
 }
 
