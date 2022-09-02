@@ -151,6 +151,7 @@ body {
   padding: 25px 0;
   height: 100px;
   font-weight: lighter;
+  border-bottom: 1px solid white;
 }
 
 .logo {
@@ -243,9 +244,12 @@ li:hover .arrow {
   height: 400px;
   background-color: black;
   opacity: 25%;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
 }
+
+.main {
+  border-top: 1px solid white;
+}
+
 
 .left-filter legend {
   font-weight: 500;
