@@ -184,6 +184,14 @@ body {
   padding-right: 20px;
 }
 
+.submenu li:first-child {
+  padding-top: 20px;
+}
+
+.submenu li:last-child {
+  padding-bottom: 20px;
+}
+
 li:hover>.submenu,
 li:hover>.submenu-sort {
   visibility: visible;
@@ -467,7 +475,10 @@ input[name="sort"] {
 }
 
 .price span {
+  position: relative;
   vertical-align: super;
+  text-transform: uppercase;
+  bottom: 6px;
 }
 
 .prod-card button {
