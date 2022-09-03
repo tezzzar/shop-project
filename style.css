@@ -478,7 +478,8 @@ input[name="sort"] {
   position: relative;
   vertical-align: super;
   text-transform: uppercase;
-  bottom: 6px;
+  bottom: 3px;
+  font-size: 25px;
 }
 
 .prod-card button {
