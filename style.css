@@ -376,6 +376,7 @@ input[name="sort"] {
   font-weight: lighter;
   border: 1px solid white;
   padding-left: 20px;
+  width: 271px;
 }
 
 .submenu-sort {
