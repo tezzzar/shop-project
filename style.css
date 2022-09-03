@@ -292,7 +292,7 @@ li:hover .arrow {
   font-size: 21px;
   font-family: "Roboto";
   color: white;
-  line-height: 0.7;
+  line-height: 0.75;
 }
 
 .left-filter-bg {
@@ -358,7 +358,7 @@ li:hover .arrow {
   font-weight: bold;
   font-size: 48px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-top: 10px;
 }
 
