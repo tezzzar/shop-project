@@ -1,16 +1,15 @@
-// let heartClick = document.querySelectorAll(".prod-pic3");
-// // let style = getComputedStyle(heartClick[i]);
-// // var cl = heartClick[i];
-// console.log(heartClick);
+let heartClick = document.querySelectorAll(".prod-pic3");
+// let style = getComputedStyle(heartClick[i]);
+// var cl = heartClick[i];
+console.log(heartClick);
 
-// heartClick.forEach((item) => {
-//   heartClick("click", function () {
-//     item.classList.toggle("Liked");
-//   });
-// });
+heartClick.forEach((item) => {
+  item.addEventListener("click", function () {
+    item.classList.toggle("liked");
+  });
+});
 
 let cardBtn = document.querySelectorAll(".add-to-card-button");
-console.log(cardBtn);
 
 let modal = document.querySelector(".modal");
 let closeBtn = document.querySelector(".btn-close");
