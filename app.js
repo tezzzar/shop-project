@@ -1,19 +1,53 @@
-var heartClick = document.querySelector(".prod-pic3");
-var style = getComputedStyle(heartClick);
+// let heartClick = document.querySelectorAll(".prod-pic3");
+// // let style = getComputedStyle(heartClick[i]);
+// // var cl = heartClick[i];
+// console.log(heartClick);
 
-heartClick.addEventListener("click", function () {
-  if (
-    heartClick.style.backgroundImage ===
-    'url("http://127.0.0.1:5500/images/heart-white.png")'
-  ) {
-    heartClick.style.backgroundImage =
-      'url("http://127.0.0.1:5500/images/heart-blue.png")';
-    heartClick.style.backgroundColor = "unset";
-  } else {
-    heartClick.style.backgroundImage =
-      'url("http://127.0.0.1:5500/images/heart-white.png")';
-    heartClick.style.backgroundColor = "#2c71b8";
+// heartClick.forEach((item) => {
+//   heartClick("click", function () {
+//     item.classList.toggle("Liked");
+//   });
+// });
+
+let cardBtn = document.querySelectorAll(".add-to-card-button");
+console.log(cardBtn);
+
+let modal = document.querySelector(".modal");
+let closeBtn = document.querySelector(".btn-close");
+// cardBtn.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     modal.classList.add("show");
+//     modal.classList.remove("hide");
+//   });
+// });
+
+// closeBtn.forEach((item) => {
+//   item.addEventListener("click", function () {
+//     modal.classList.add("hide");
+//     modal.classList.remove("show");
+//   });
+// });
+
+function openModal() {
+  modal.classList.add("show");
+  modal.classList.remove("hide");
+}
+
+function closeModal() {
+  modal.classList.add("hide");
+  modal.classList.remove("show");
+}
+
+cardBtn.forEach((item) => {
+  item.addEventListener("click", openModal);
+});
+
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    closeModal();
   }
 });
 
-console.log(heartClick);
+$(".slider").slick();
