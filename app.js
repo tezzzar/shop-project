@@ -1,7 +1,7 @@
 let heartClick = document.querySelectorAll(".prod-pic3");
 // let style = getComputedStyle(heartClick[i]);
 // var cl = heartClick[i];
-console.log(heartClick);
+// console.log(heartClick);
 
 heartClick.forEach((item) => {
   item.addEventListener("click", function () {
@@ -9,7 +9,7 @@ heartClick.forEach((item) => {
   });
 });
 
-let cardBtn = document.querySelectorAll(".add-to-card-button");
+let cardBtn = document.querySelectorAll(".more-details");
 
 let modal = document.querySelector(".modal");
 let closeBtn = document.querySelector(".btn-close");
@@ -49,4 +49,47 @@ modal.addEventListener("click", function (e) {
   }
 });
 
-$(".slider").slick();
+$(".slider").slick({
+  dots: true,
+});
+
+// console.log(slick);
+
+// $(".slick-theme").slick({
+//   arrows: true,
+//   prevArrow: ".slickArrowFixPrev",
+//   nextArrow: ".slickArrowFixNext",
+// });
+
+let dotsFix = document.querySelectorAll("button[role='tab']");
+dotsFix.forEach((item) => {
+  item.classList.add("slider-button-fix");
+});
+// console.log(dotsFix);
+
+let slickDotsFix = document.querySelector(".slick-dots");
+slickDotsFix.classList.add("slick-dots-fix");
+// console.log(slickDotsFix);
+
+// let slickArrowFix = document.querySelectorAll(".slick-arrow");
+// slickArrowFix.forEach((item) => {
+//   item.classList.add("arrowFix");
+// });
+
+// let slickArrowFixPrev = document.querySelector(".slick-prev", "before");
+// // slickArrowFixPrev.classList.add("arrowFixPrevImg");
+
+// let slickArrowFixNext = document.querySelector(".slick-next");
+// // slickArrowFixNext.classList.add("arrowFixNextImg");
+
+// console.log(slickArrowFixPrev);
+// console.log(slickArrowFixNext);
+
+// $(document).ready(function () {
+//   $(".single-item").slick({
+//     arrows: true,
+//   });
+// });
+
+// prevArrow: '.класс для стрелки перехода на предыдущий слайд',
+// nextArrow: '.класс для стрелки перехода на следующий слайд'

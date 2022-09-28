@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Quattrocento+Sans:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -52,13 +53,14 @@ body {
 }
 
 /* -------------search-header-------------- */
+
 .form-search-header {
   height: 40px;
   border: 1px solid #2c71b8;
   margin-top: 5px;
 }
 
-.form-search-header > input[type=text] {
+.form-search-header > input[type="text"] {
   color: #2c71b8;
   font-size: 21px;
   font-family: "roboto";
@@ -74,22 +76,6 @@ body {
   border: none;
   background: none;
   vertical-align: text-bottom;
-}
-
-.form-search-header > input::-moz-placeholder {
-  text-decoration: none;
-  color: #2c71b8;
-  font-size: 21px;
-  font-family: "roboto";
-  font-weight: lighter;
-}
-
-.form-search-header > input:-ms-input-placeholder {
-  text-decoration: none;
-  color: #2c71b8;
-  font-size: 21px;
-  font-family: "roboto";
-  font-weight: lighter;
 }
 
 .form-search-header > input::placeholder {
@@ -149,7 +135,8 @@ body {
 }
 
 /* -----------------search-header---------------- */
-[class*=col-] {
+
+[class*="col-"] {
   float: left;
   padding-left: 15px;
   padding-right: 15px;
@@ -265,11 +252,11 @@ li:hover .arrow {
   text-transform: uppercase;
 }
 
-.left-filter input[type=checkbox] {
+.left-filter input[type="checkbox"] {
   display: none;
 }
 
-.left-filter input[type=checkbox]:checked + label::before {
+.left-filter input[type="checkbox"]:checked + label::before {
   background-color: white;
 }
 
@@ -363,11 +350,12 @@ li:hover .arrow {
   margin-top: 10px;
 }
 
-input[name=sort] {
+input[name="sort"] {
   display: none;
 }
 
 /* --------------menu-sort---------------- */
+
 .menu-sort {
   margin-top: 10px;
 }
@@ -424,13 +412,14 @@ input[name=sort] {
 }
 
 /* ___________________________Card-Product________________ */
-[class*=card-] {
+
+[class*="card-"] {
   margin-top: 30px;
   font-family: "Roboto";
   border: 1px solid white;
 }
 
-[class*=prod-pic] {
+[class*="prod-pic"] {
   background-color: #cadbed;
   width: 270px;
   height: 180px;
@@ -448,7 +437,7 @@ input[name=sort] {
 
 .prod-description {
   padding: 15px;
-  background-color: rgba(44, 113, 184, 0.75);
+  background-color: rgb(44, 113, 184, 0.75);
 }
 
 .prod-card p {
@@ -510,8 +499,9 @@ input[name=sort] {
 }
 
 /* ___________add-to-card-button____________ */
+
 .add-to-card-button {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255, 0.2);
   text-decoration: none;
   border: 1px solid white;
   width: 210px;
@@ -558,6 +548,7 @@ input[name=sort] {
 }
 
 /* _____________card-backgraund-small-image____________ */
+
 .prod-pic1 {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.75);
@@ -699,17 +690,17 @@ input[name=sort] {
 }
 
 .slick-dots-fix {
+  li button:before {
+    content: "" !important;
+  }
+  :hover button {
+    background: #fff !important;
+  }
+  li button {
+    width: 10px !important;
+    height: 10px !important;
+  }
   top: 160px;
-}
-.slick-dots-fix li button:before {
-  content: "" !important;
-}
-.slick-dots-fix :hover button {
-  background: #fff !important;
-}
-.slick-dots-fix li button {
-  width: 10px !important;
-  height: 10px !important;
 }
 
 .slider {
@@ -722,18 +713,21 @@ input[name=sort] {
   font-size: 100px;
   line-height: 400px;
   color: #fff;
+  .slick-prev:before {
+    content: url(../images/arrow-prev.png) !important;
+  }
+
+  .slick-next:before {
+    content: url(../images/arrow-next.png) !important;
+  }
+
+  .slick-prev {
+    z-index: 10;
+    left: -10px !important;
+  }
+
+  .slick-next {
+    z-index: 10;
+    right: 20px !important;
+  }
 }
-.slider .slick-prev:before {
-  content: url(../images/arrow-prev.png) !important;
-}
-.slider .slick-next:before {
-  content: url(../images/arrow-next.png) !important;
-}
-.slider .slick-prev {
-  z-index: 10;
-  left: -10px !important;
-}
-.slider .slick-next {
-  z-index: 10;
-  right: 20px !important;
-}/*# sourceMappingURL=style.css.map */
