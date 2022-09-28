@@ -724,10 +724,10 @@ input[name=sort] {
   color: #fff;
 }
 .slider .slick-prev:before {
-  content: url(../images/arrow-prev.png) !important;
+  content: url(images/arrow-prev.png) !important;
 }
 .slider .slick-next:before {
-  content: url(../images/arrow-next.png) !important;
+  content: url(images/arrow-next.png) !important;
 }
 .slider .slick-prev {
   z-index: 10;
