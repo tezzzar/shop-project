@@ -51,7 +51,6 @@ body {
   width: 75%;
 }
 
-/* -------------search-header-------------- */
 .form-search-header {
   height: 40px;
   border: 1px solid #2c71b8;
@@ -148,7 +147,6 @@ body {
   left: -25%;
 }
 
-/* -----------------search-header---------------- */
 [class*=col-] {
   float: left;
   padding-left: 15px;
@@ -367,7 +365,6 @@ input[name=sort] {
   display: none;
 }
 
-/* --------------menu-sort---------------- */
 .menu-sort {
   margin-top: 10px;
 }
@@ -423,7 +420,6 @@ input[name=sort] {
   color: #2c71b8;
 }
 
-/* ___________________________Card-Product________________ */
 [class*=card-] {
   margin-top: 30px;
   font-family: "Roboto";
@@ -509,7 +505,6 @@ input[name=sort] {
   color: white;
 }
 
-/* ___________add-to-card-button____________ */
 .add-to-card-button {
   background-color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
@@ -557,7 +552,6 @@ input[name=sort] {
   background-image: url(images/cart-blue.png);
 }
 
-/* _____________card-backgraund-small-image____________ */
 .prod-pic1 {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.75);
