@@ -665,11 +665,12 @@ input[name="sort"] {
 
 .form-field {
   margin: 15px 0;
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 .btn-close {
   float: right;
+  cursor: pointer;
 }
 
 .clear {
