@@ -216,7 +216,7 @@ li:hover > .submenu-sort {
   text-align: center;
   line-height: 50px;
   font-family: "Roboto";
-  font-weight: light;
+  font-weight: 300;
 }
 
 .submenu a {
@@ -643,7 +643,7 @@ input[name=sort] {
   color: #2c71b8;
   font-size: 21px;
   font-family: "Roboto";
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .modal {
