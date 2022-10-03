@@ -475,7 +475,7 @@ input[name=sort] {
   font-size: 30px;
 }
 
-.prod-card button {
+.more-details {
   background-color: #2c71b8;
   text-decoration: none;
   border: 1px solid white;
@@ -487,8 +487,7 @@ input[name=sort] {
   display: block;
   margin-bottom: 15px;
 }
-
-.prod-card button:hover {
+.more-details:hover {
   background-color: #fff;
   cursor: pointer;
   border: 1px solid #2c71b8;
@@ -730,4 +729,16 @@ input[name=sort] {
 .slider .slick-next {
   z-index: 10;
   right: 18px !important;
+}
+
+.counter {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.counter input,
+.counter button {
+  border: none;
+  border-color: #2c71b8;
+  color: #2c71b8;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

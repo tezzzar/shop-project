@@ -1,7 +1,4 @@
 let heartClick = document.querySelectorAll(".prod-pic3");
-// let style = getComputedStyle(heartClick[i]);
-// var cl = heartClick[i];
-// console.log(heartClick);
 
 heartClick.forEach((item) => {
   item.addEventListener("click", function () {
@@ -13,19 +10,6 @@ let cardBtn = document.querySelectorAll(".more-details");
 
 let modal = document.querySelector(".modal");
 let closeBtn = document.querySelector(".btn-close");
-// cardBtn.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     modal.classList.add("show");
-//     modal.classList.remove("hide");
-//   });
-// });
-
-// closeBtn.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     modal.classList.add("hide");
-//     modal.classList.remove("show");
-//   });
-// });
 
 function openModal() {
   modal.classList.add("show");
@@ -53,43 +37,125 @@ $(".slider").slick({
   dots: true,
 });
 
-// console.log(slick);
-
-// $(".slick-theme").slick({
-//   arrows: true,
-//   prevArrow: ".slickArrowFixPrev",
-//   nextArrow: ".slickArrowFixNext",
-// });
-
 let dotsFix = document.querySelectorAll("button[role='tab']");
 dotsFix.forEach((item) => {
   item.classList.add("slider-button-fix");
 });
-// console.log(dotsFix);
 
 let slickDotsFix = document.querySelector(".slick-dots");
 slickDotsFix.classList.add("slick-dots-fix");
-// console.log(slickDotsFix);
 
-// let slickArrowFix = document.querySelectorAll(".slick-arrow");
-// slickArrowFix.forEach((item) => {
-//   item.classList.add("arrowFix");
+// show Modal by Scroll ----------------------------------
+
+// function showModalByScroll() {
+//   if (window.pageYOffset > document.body.scrollHeight / 2) {
+//     openModal();
+//     window.removeEventListener("scroll", showModalByScroll);
+//   }
+// }
+
+// window.addEventListener("scroll", showModalByScroll);
+
+// AOS.init();
+
+// -----------------------------------------------------------
+
+// let incrementBtns = document.querySelectorAll(".increment");
+// let decrementBtns = document.querySelectorAll(".decrement");
+// let productsQuantity = document.querySelectorAll(".product-quantity input");
+
+// function Counter(
+//   incrementButton,
+//   decrementButton,
+//   inputField,
+//   minCount = 1,
+//   maxCount = 5
+// ) {
+//   this.domRefs = {
+//     incrementButton,
+//     decrementButton,
+//     inputField,
+//   };
+//   this.toggleButtonState = function () {
+//     let count = this.domRefs.inputField.value;
+//     this.domRefs.decrementButton.disabled = count <= minCount;
+//     this.domRefs.incrementButton.disabled = count >= maxCount;
+//   };
+
+//   this.toggleButtonState();
+
+//   this.increment = function () {
+//     this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+//     this.toggleButtonState();
+//   };
+
+//   this.decrement = function () {
+//     this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+//     this.toggleButtonState();
+//   };
+
+//   this.domRefs.incrementButton.addEventListener(
+//     "click",
+//     this.increment.bind(this)
+//   );
+//   this.domRefs.decrementButton.addEventListener(
+//     "click",
+//     this.decrement.bind(this)
+//   );
+// }
+
+// window.addEventListener("click", function (e) {
+//   console.log(e.target);
+//   e.target.closest(".product-quantity");
 // });
 
-// let slickArrowFixPrev = document.querySelector(".slick-prev", "before");
-// // slickArrowFixPrev.classList.add("arrowFixPrevImg");
+// let counter1 = new Counter(
+//   incrementBtns[0],
+//   decrementBtns[0],
+//   productsQuantity[0]
+// );
 
-// let slickArrowFixNext = document.querySelector(".slick-next");
-// // slickArrowFixNext.classList.add("arrowFixNextImg");
+// console.log(counter1);
 
-// console.log(slickArrowFixPrev);
-// console.log(slickArrowFixNext);
+// ________________________________________________________________________________
 
-// $(document).ready(function () {
-//   $(".single-item").slick({
-//     arrows: true,
-//   });
-// });
+const counter = function () {
+  const btns = document.querySelectorAll(".counter__btn");
 
-// prevArrow: '.класс для стрелки перехода на предыдущий слайд',
-// nextArrow: '.класс для стрелки перехода на следующий слайд'
+  btns.forEach((btn) => {
+    btn.addEventListener("click", function (minCount = 1, maxCount = 5) {
+      const direction = this.dataset.direction;
+      const inp = this.parentElement.querySelector(".counter__value");
+      const plusButton = this.parentElement.querySelector(
+        "button[data-direction='plus']"
+      );
+      const minusButton = this.parentElement.querySelector(
+        "button[data-direction='minus']"
+      );
+      const currentValue = +inp.value;
+      let newValue;
+
+      if (direction === "plus") {
+        newValue = currentValue + 1 < 5 ? currentValue + 1 : 5;
+      } else {
+        newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
+      }
+
+      inp.value = newValue;
+
+      if (newValue >= maxCount) {
+        plusButton.disabled = true;
+      } else {
+        plusButton.disabled = false;
+      }
+
+      if (newValue === 1) {
+        minusButton.disabled = true;
+      } else {
+        minusButton.disabled = false;
+      }
+    });
+  });
+};
+
+counter();
