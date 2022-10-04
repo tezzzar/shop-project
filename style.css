@@ -730,6 +730,9 @@ input[name=sort] {
   z-index: 10;
   right: 18px !important;
 }
+.slider .slick-active > button {
+  background-color: #fff;
+}
 
 .counter {
   text-align: center;

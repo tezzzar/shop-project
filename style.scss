@@ -717,7 +717,11 @@ input[name="sort"] {
     z-index: 10;
     right: 18px !important;
   }
+  .slick-active > button {
+    background-color: #fff;
+  }
 }
+
 .counter {
   text-align: center;
   margin-bottom: 15px;
